@@ -122,5 +122,5 @@ let formOpen = () =>{
     userNameShow();
     timeGreet();
     typeAnimation();
-    formOpen();
+//     formOpen();
 });//function close
