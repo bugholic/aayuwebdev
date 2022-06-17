@@ -118,7 +118,9 @@ let formOpen = () =>{
     })// function close
     
 }// function close
+   window.addEventListener('load', () => {
     userNameShow();
     timeGreet();
     typeAnimation();
     formOpen();
+});//function close
