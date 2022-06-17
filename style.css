@@ -1,0 +1,212 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    --text: blueviolet;
+    background-color: #1f1e1e ;
+    color: white !important;
+}
+.navItem {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1vw;
+    font-weight: 700;
+}
+.navItem li:last-child{
+    position: absolute;
+    right: 0;
+    top: 1%;
+    text-transform: capitalize;
+}
+.navItem li {
+    list-style: none;
+    margin: 2vw;
+}
+
+.navItem li a {
+    text-decoration: none;
+    color: #a1e8ed;
+}
+.navItem li a:hover {
+    color: aqua;
+    border-bottom: 2px dotted white;
+}
+
+#Home{
+    min-height: 100vh;
+    /* margin-bottom: 5vh; */
+    background-image: url(./files/bgImg.jpg);
+    background-size: cover;
+    color: white;
+}
+.info {
+    margin-left: 10vw;
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.annotation {
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: aqua;
+}
+
+.myself {
+    color: blueviolet;
+    font-size: 10vw;
+}
+.myBout{
+    font-size: 2vw;
+
+    font-family: monospace;
+}
+.profile img {
+    margin-right: 10vw;
+    width: 30vw;
+    height: 60vh;
+}
+
+#skills {
+    padding: 10%;
+    min-height: 100vh;
+    background-image:url(./files/skillBg.jfif);
+    background-size: cover;
+    color: white;
+}
+
+#skills .progress {
+    margin: 10vh;
+    display: flex;
+}
+#skills h1 {
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    font-size :5vw;
+}
+
+.progress span {
+    color: black;
+    font-weight: 700;
+    font-family: monospace;
+}
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10%;
+    background-image:url(./files/OIP.jfif);
+    background-size: cover;
+}
+
+.details h3, .details a {
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 5vw;
+}
+.details button ,.submitBtn ,#closeForm {
+    background-color: transparent;
+    color: blueviolet;
+    border: none;
+    padding: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+    border-radius: 10px;
+    /* transition: all 1s; */
+}
+.details button:hover,.submitBtn:hover ,#closeForm:hover{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+}
+.details #closeForm{
+    display: none;
+}
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: blueviolet;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px 10px 5px 10px;
+    /* Some padding */
+    border-radius: 50px;
+    /* Rounded corners */
+}
+.projects{
+    background: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:url(./files/portfolio.jfif);
+    background-size: cover;
+    color: white;
+
+}
+#projects {
+    display: block;
+    font-size: 2rem;
+    color: #af80db;
+}   
+
+
+
+
+/* js form styling */
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+.contactEl{
+    width: 50vw;
+margin: 2%;
+padding: 0 2%;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width:769px) {
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin-left: 0;
+    }
+    .navItem{
+        flex-direction: column;
+        font-size: 2vh;
+        margin-bottom: -12vh;
+    }
+    .myBout{
+        font-size: 8px; 
+        letter-spacing: 0.2vw;
+    }
+    .profile img{
+        height: 20vh;
+    }}
