@@ -118,9 +118,36 @@ let formOpen = () =>{
     })// function close
     
 }// function close
-   window.addEventListener('load', () => {
+window.addEventListener('load', () => {
     userNameShow();
     timeGreet();
     typeAnimation();
-//     formOpen();
+    formOpen();
 });//function close
+
+
+function reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+    reveals.forEach((reveal) => {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveal.getBoundingClientRect().top;
+        var elementVisible = 100;
+        
+        if(elementTop < windowHeight - elementVisible){
+            reveal.classList.add("active");
+        }else{
+            reveal.classList.remove("active");
+        }
+    });
+}
+window.addEventListener('scroll',reveal);
+
+function homeReveal() {
+    var home = document.getElementById('Home');
+    console.log('loaded')
+    home.classList.add('active');
+    home.classList.remove('homeReveal');
+    console.log(home)
+}
+window.addEventListener('load',homeReveal);
+

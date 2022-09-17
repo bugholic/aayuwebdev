@@ -1,13 +1,20 @@
-* {
+:root{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-
 body {
     --text: blueviolet;
-    background-color: #1f1e1e ;
+    background-color: #1d2039!important;
     color: white !important;
+}
+.dp{
+    width:  100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
 }
 .navItem {
     display: flex;
@@ -25,7 +32,9 @@ body {
 .navItem li {
     list-style: none;
     margin: 2vw;
+    transition: all 1s ease;
 }
+
 
 .navItem li a {
     text-decoration: none;
@@ -38,10 +47,15 @@ body {
 
 #Home{
     min-height: 100vh;
-    /* margin-bottom: 5vh; */
-    background-image: url(./files/bgImg.jpg);
     background-size: cover;
     color: white;
+    transition: 5s all ease;
+}
+.homeReveal{
+    opacity: 0;
+}
+.homeReveal.active{
+    opacity: 1;
 }
 .info {
     margin-left: 10vw;
@@ -76,9 +90,9 @@ body {
 #skills {
     padding: 10%;
     min-height: 100vh;
-    background-image:url(./files/skillBg.jfif);
-    background-size: cover;
-    color: white;
+    /* background-image:url(./files/skillBg.jfif); */
+    /* background-size: cover; */
+    /* color: white; */
 }
 
 #skills .progress {
@@ -102,10 +116,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 10%;
-    background-image:url(./files/OIP.jfif);
-    background-size: cover;
 }
 
 .details h3, .details a {
@@ -120,13 +132,15 @@ body {
     padding: 2%;
     margin-top: 2%;
     cursor: pointer;
-    border-radius: 10px;
     /* transition: all 1s; */
 }
-.details button:hover,.submitBtn:hover ,#closeForm:hover{
+.details button:hover,.submitBtn:hover ,#closeForm:hover , .details a:hover{
     background-color: blueviolet;
     color: white;
     border: none;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 10px;
 }
 .details #closeForm{
     display: none;
@@ -158,14 +172,14 @@ body {
     /* Rounded corners */
 }
 .projects{
-    background: var(--text);
+    /* background: var(--text); */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image:url(./files/portfolio.jfif);
-    background-size: cover;
-    color: white;
+    /* background-image:url(./files/portfolio.jfif); */
+    /* background-size: cover; */
+    /* color: white; */
 
 }
 #projects {
@@ -190,6 +204,13 @@ padding: 0 2%;
 
 /* RESPONSIVE */
 @media only screen and (max-width:769px) {
+    .dp{
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-50%);
+        width: 100px;
+        height: 100px;
+    }
     .info{
         display: flex;
         flex-direction: column;
@@ -199,9 +220,10 @@ padding: 0 2%;
         margin-left: 0;
     }
     .navItem{
-        flex-direction: column;
+        /* flex-direction: column;
         font-size: 2vh;
-        margin-bottom: -12vh;
+        margin-bottom: -12vh; */
+        display: none;
     }
     .myBout{
         font-size: 8px; 
@@ -210,3 +232,14 @@ padding: 0 2%;
     .profile img{
         height: 20vh;
     }}
+.reveal{
+    position: relative;
+    transform: translateY(144px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+

@@ -14,11 +14,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="shortcut icon" href="./files/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Aayush | Web Designs</title>
 </head>
 
 <body>
-    <main id="Home">
+    <main id="Home" class="homeReveal">
     <header>
         <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
             <nav>
@@ -31,55 +32,60 @@
                 </ul>
             </nav>
     </header>
-        <div class="info">
-            <div class="annotation">
-                Hello,I'M
-                <div class="myself"><span id="typed"> Aayush</span></div>
-                <p class='myBout'>A passionate Web Designer & Developer,<br/> Love to design
-                    innovative Frontend for you</p>
+    <div class="info">
+        <div class="annotation">
+            Hello,I'M
+            <div class="myself"><span id="typed"> Aayush</span></div>
+            <p class='myBout'>A passionate Web Designer & Developer,<br/> Love to design
+                innovative Frontend for you</p>
             </div>
+            <img class="dp" src="./files/img.jpeg" alt="">
         </div>
     </main>
-    
-    <section id="skills">
+    <section id="skills" class="reveal">
             <div class="skills">
-            <h1>Skills</h1>
+            <h1>SkillSet</h1>
             <div class="progress">
                 <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25"
-                    aria-valuemin="0" aria-valuemax="100"><span>HTML 85%</span></div>
+                    aria-valuemin="0" aria-valuemax="100">HTML</div>
             </div>
             <div class="progress">
                 <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="50"
-                    aria-valuemin="0" aria-valuemax="100"><span>CSS 75%</span></div>
+                    aria-valuemin="0" aria-valuemax="100">CSS</div>
             </div>
             <div class="progress">
                 <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="75"
-                    aria-valuemin="0" aria-valuemax="100"><span>JAVASCRIPT 65%</span></div>
+                    aria-valuemin="0" aria-valuemax="100">JAVASCRIPT 65%</div>
             </div>
             <div class="progress">
                 <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="100"
-                    aria-valuemin="0" aria-valuemax="100"><span>Mysqli 40%</span></div>
+                    aria-valuemin="0" aria-valuemax="100">Mysqli</div>
             </div>
             <div class="progress">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="100"
-                    aria-valuemin="0" aria-valuemax="100"><span>PHP 50%</span></div>
+                    aria-valuemin="0" aria-valuemax="100">PHP</div>
             </div>
             </div>
             </section>
-    <div class="contact">
+    <div class="contact reveal">
         <section id="contact">
             <div class="details" id="details">
-                <h3> <a href="#"> Aayush Vishwakarma</a></h3>
-                <h3><a href="mailto:developerayu@gmail.com">devloperayu@gmail.com</a> </h3>
-                <h3>Telegram :<a href="t.me/arogarant">arogarant</a></h3>
-<!--                 <button id="formBtn">GET IN TOUCH</button> -->
-<!--                 <button id="closeForm">Close</button> -->
+                <h3><a href="#"> Aayush Vishwakarma</a></h3>
+                <h3><a href="mailto:developerayu@gmail.com">Mail <span class="material-symbols-outlined">
+                    mail
+                    </span></a>  </h3>
+                <h3><a href="t.me/arogarant">Telegram <span class="material-symbols-outlined">
+                    send
+                    </span></a></h3>
+                <button id="formBtn">GET IN TOUCH</button>
+                <button id="closeForm">Close</button>
             </div>
         </section>
     </div>
-    <div class="projects">
+    <div class="projects reveal">
         <section id="projects">
-            <h1>Checkout</h1>
+            <!-- <h1>Updating soon</h1> -->
+
             <p><a href="https://replit.com/@arogarant">Replit</a></p>
             <p><a href="https://github.com/arogarant">Github</a></p>
         </section>
