@@ -118,7 +118,6 @@ let formOpen = () =>{
     })// function close
     
 }// function close
-//window function here
 window.addEventListener('load', () => {
     // userNameShow();
     // timeGreet();
@@ -160,7 +159,7 @@ const projectList = [
     {
         Title : "Aroglive , live sports",
         thumbnail: "./projectThumbnail/aroglive.png",
-        link: "aroglive.netlify.com"
+        link: "https://aroglive.netlify.app/"
     },
     // {
     //     Title : "Aroglive , live sports",
@@ -187,7 +186,7 @@ thumbnail.src = projectList[projectNum].thumbnail
 
 let title = document.createElement("a");
 title.classList.add("title");
-title.attribute("href", projectList[projectNum].link);
+title.setAttribute("href" , projectList[projectNum].link)
 projectBox.appendChild(title);
 title.innerText = projectList[projectNum].Title
 
