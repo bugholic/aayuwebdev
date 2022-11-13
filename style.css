@@ -161,7 +161,13 @@ body {
     width: 30rem;
     height: 20rem;
 }
-
+.title{
+    font-family: monospace;
+    color: blueviolet;
+}
+.title:hover{
+    text-decoration: none;
+}
 
 
 /* js form styling */
