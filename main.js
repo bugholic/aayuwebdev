@@ -119,8 +119,8 @@ let formOpen = () =>{
     
 }// function close
 window.addEventListener('load', () => {
-    userNameShow();
-    timeGreet();
+    // userNameShow();
+    // timeGreet();
     typeAnimation();
     formOpen();
 });//function close
@@ -144,10 +144,48 @@ window.addEventListener('scroll',reveal);
 
 function homeReveal() {
     var home = document.getElementById('Home');
-    console.log('loaded')
     home.classList.add('active');
     home.classList.remove('homeReveal');
-    console.log(home)
 }
 window.addEventListener('load',homeReveal);
 
+
+//grab projects
+
+let projects = document.getElementById("projects");
+// projects.innerHTML = "hello world"
+
+const projectList = [
+    {
+        Title : "Aroglive , live sports",
+        thumbnail: "./projectThumbnail/aroglive.png"
+    },
+    // {
+    //     Title : "Aroglive , live sports",
+    //     thumbnail: "./projectThumbnail/aroglive.png"
+    // },
+    // {
+    //     Title : "Aroglive , live sports",
+    //     thumbnail: "./projectThumbnail/aroglive.png"
+    // }
+];
+
+projectList.forEach(element => {
+    let projectNum = -1;
+    projectNum++
+    
+let projectBox = document.createElement("div");
+projectBox.classList.add("projectBox");
+projects.appendChild(projectBox);
+
+let thumbnail = document.createElement("img");
+thumbnail.classList.add("thumbnail");
+projectBox.appendChild(thumbnail);
+thumbnail.src = projectList[projectNum].thumbnail
+
+let title = document.createElement("p");
+title.classList.add("title");
+projectBox.appendChild(title);
+title.innerText = projectList[projectNum].Title
+
+});

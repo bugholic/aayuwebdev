@@ -23,12 +23,6 @@ body {
     font-size: 1vw;
     font-weight: 700;
 }
-.navItem li:last-child{
-    position: absolute;
-    right: 0;
-    top: 1%;
-    text-transform: capitalize;
-}
 .navItem li {
     list-style: none;
     margin: 2vw;
@@ -60,8 +54,6 @@ body {
 .info {
     margin-left: 10vw;
     min-height: 60vh;
-    display: flex;
-    justify-content: space-between;
 }
 
 
@@ -78,8 +70,6 @@ body {
 }
 .myBout{
     font-size: 2vw;
-
-    font-family: monospace;
 }
 .profile img {
     margin-right: 10vw;
@@ -87,36 +77,30 @@ body {
     height: 60vh;
 }
 
-#skills {
-    padding: 10%;
-    min-height: 100vh;
-    /* background-image:url(./files/skillBg.jfif); */
-    /* background-size: cover; */
-    /* color: white; */
-}
-
-#skills .progress {
-    margin: 10vh;
+.skills{
     display: flex;
 }
+
 #skills h1 {
     color: var(--text);
     display: grid;
     place-items: center;
     font-size :5vw;
 }
+.programmingSvgs img{
+    width: 20vw;
+}
+.programmingGifs img{
+    width: 15vw;
+    height: 15vw;
 
-.progress span {
-    color: black;
-    font-weight: 700;
-    font-family: monospace;
 }
 #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* min-height: 100vh; */
+    min-height: 80vh;
     padding: 10%;
 }
 
@@ -147,47 +131,36 @@ body {
 }
 #myBtn {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Fixed/sticky position */
     bottom: 20px;
-    /* Place the button at the bottom of the page */
     right: 30px;
-    /* Place the button 30px from the right */
-    z-index: 99;
-    /* Make sure it does not overlap */
+    z-index: 99;  
     border: none;
-    /* Remove borders */
     outline: none;
-    /* Remove outline */
     background-color: blueviolet;
-    /* Set a background color */
     color: white;
-    /* Text color */
     cursor: pointer;
-    /* Add a mouse pointer on hover */
     padding: 10px 10px 5px 10px;
-    /* Some padding */
     border-radius: 50px;
-    /* Rounded corners */
 }
 .projects{
-    /* background: var(--text); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    /* background-image:url(./files/portfolio.jfif); */
-    /* background-size: cover; */
-    /* color: white; */
-
-}
-#projects {
-    display: block;
     font-size: 2rem;
     color: #af80db;
+}
+#projects {
+    display: flex;
+    flex-wrap: wrap;
 }   
-
+.projectBox{
+    width: 30vw;
+    height: auto;
+    margin: 5ch ;
+}
+.thumbnail{
+    width: 30rem;
+    height: 20rem;
+}
 
 
 
@@ -232,14 +205,14 @@ padding: 0 2%;
     .profile img{
         height: 20vh;
     }}
-.reveal{
+/* .reveal{
     position: relative;
-    transform: translateY(144px);
+    transform: translateY(-100px);
     opacity: 0;
     transition: 2s all ease;
 }
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
-}
+} */
 
