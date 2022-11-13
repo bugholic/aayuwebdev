@@ -1,35 +1,35 @@
 // setting user input for userID 
-// const userNameShow = () =>{
-//     let user = document.getElementById('user');
-//     if (localStorage.getItem('user')) {
-//         user.textContent = localStorage.getItem('user');
-//     }
-//     else {
-//         let userIn = prompt('Welcome ! Please Enter your name', 'user')
-//         if (!userIn) {
-//             alert('Please Fill the field');
-//             let userIn = prompt('Welcome ! Please Enter your name', 'user')
-//         } else {  
-//             user.innerHTML = + userIn;
-//             localStorage.setItem('user', userIn);
-//         }
-//     }
+const userNameShow = () =>{
+    let user = document.getElementById('user');
+    if (localStorage.getItem('user')) {
+        user.textContent = localStorage.getItem('user');
+    }
+    else {
+        let userIn = prompt('Welcome ! Please Enter your name', 'user')
+        if (!userIn) {
+            alert('Please Fill the field');
+            let userIn = prompt('Welcome ! Please Enter your name', 'user')
+        } else {  
+            user.innerHTML = + userIn;
+            localStorage.setItem('user', userIn);
+        }
+    }
 }//function close
 
 // intialzing greetings with time 
-// const timeGreet = () =>{
+const timeGreet = () =>{
 
-// let greet = document.getElementById('greeting')
-// const date = new Date();
-// let hour = date.getHours();
-// // console.log(hour);
-// if(0<=hour && hour<12){
-//     greet.innerText='Good Morning';
-// }else if(12<=hour && hour<17){  
-//     greet.innerText='Good Afternoon';
-// }else if(17<=hour && hour<=24){
-//     greet.innerText='Good Evening';
-// }
+let greet = document.getElementById('greeting')
+const date = new Date();
+let hour = date.getHours();
+// console.log(hour);
+if(0<=hour && hour<12){
+    greet.innerText='Good Morning';
+}else if(12<=hour && hour<17){  
+    greet.innerText='Good Afternoon';
+}else if(17<=hour && hour<=24){
+    greet.innerText='Good Evening';
+}
 
 
 
@@ -70,52 +70,52 @@ let typeAnimation = () => {
 }//function close
 
 
-// //creating contact form
-// let formOpen = () =>{
+//creating contact form
+let formOpen = () =>{
 
-//     var formBtn = document.getElementById('formBtn');
-//     var contactForm = document.getElementById('contact');
+    var formBtn = document.getElementById('formBtn');
+    var contactForm = document.getElementById('contact');
     
-//     formBtn.addEventListener('click' , formOpen = () =>{
+    formBtn.addEventListener('click' , formOpen = () =>{
 
-//         let form = document.createElement('form');
-//         contactForm.appendChild(form);
-//         form.classList.add('contact')
-//         form.setAttribute('method','post');
-//         form.setAttribute('action','mailto:developerayu@gmail.com')
+        let form = document.createElement('form');
+        contactForm.appendChild(form);
+        form.classList.add('contact')
+        form.setAttribute('method','post');
+        form.setAttribute('action','mailto:developerayu@gmail.com')
 
-//         let name = document.createElement('input');
-//         name.setAttribute('placeholder','Enter your Name');
-//         form.appendChild(name);
+        let name = document.createElement('input');
+        name.setAttribute('placeholder','Enter your Name');
+        form.appendChild(name);
 
-//         let email = document.createElement('input')
-//         email.setAttribute('placeholder','Enter your Email')
-//         form.appendChild(email);
+        let email = document.createElement('input')
+        email.setAttribute('placeholder','Enter your Email')
+        form.appendChild(email);
 
-//         let concern = document.createElement('textarea');
-//         concern.setAttribute('placeholder','Enter your concern Please');
-//         form.appendChild(concern);
+        let concern = document.createElement('textarea');
+        concern.setAttribute('placeholder','Enter your concern Please');
+        form.appendChild(concern);
 
-//         let submitBtn = document.createElement('button');
-//         submitBtn.innerText='Submit';
-//         submitBtn.setAttribute('value','submit');
-//         form.appendChild(submitBtn);
+        let submitBtn = document.createElement('button');
+        submitBtn.innerText='Submit';
+        submitBtn.setAttribute('value','submit');
+        form.appendChild(submitBtn);
 
 
-//         name.classList.add('contactEl')
-//         email.classList.add('contactEl')
-//         concern.classList.add('contactEl')
-//         submitBtn.classList.add('submitBtn')
-//         formBtn.style.display='none';
-//         let closeForm = document.getElementById('closeForm');
-//         closeForm.style.display='block';
+        name.classList.add('contactEl')
+        email.classList.add('contactEl')
+        concern.classList.add('contactEl')
+        submitBtn.classList.add('submitBtn')
+        formBtn.style.display='none';
+        let closeForm = document.getElementById('closeForm');
+        closeForm.style.display='block';
 
-//         closeForm.addEventListener('click',() =>{
-//             closeForm.style.display='none'
-//             formBtn.style.display='block';
-//             form.style.display='none';
-//         }) 
-//     })// function close
+        closeForm.addEventListener('click',() =>{
+            closeForm.style.display='none'
+            formBtn.style.display='block';
+            form.style.display='none';
+        }) 
+    })// function close
     
 }// function close
 //window function here
@@ -187,7 +187,7 @@ thumbnail.src = projectList[projectNum].thumbnail
 
 let title = document.createElement("a");
 title.classList.add("title");
-title.attribute("href", projectList[projectNum].Title);
+title.attribute("href", projectList[projectNum].link);
 projectBox.appendChild(title);
 title.innerText = projectList[projectNum].Title
 
