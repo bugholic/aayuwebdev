@@ -119,7 +119,7 @@ body {
     /* transition: all 1s; */
 }
 .details button:hover,.submitBtn:hover ,#closeForm:hover , .details a:hover{
-    background-color: blueviolet;
+    background-color: white;
     color: white;
     border: none;
     align-items: center;
